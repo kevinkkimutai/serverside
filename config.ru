@@ -6,6 +6,8 @@ use Rack::Cors do
       resource '*', headers: :any, methods: [:get, :post, :delete, :put, :patch, :options, :head]
     end
   end
+  
+  use Rack::JSONBodyParser
 
 # Our application
 use MemeController
